@@ -1,0 +1,1 @@
+<div style="background: black; color: white; padding: 50px; margin: 100px;">This is footer</div>
