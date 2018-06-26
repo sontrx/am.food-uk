@@ -1,0 +1,95 @@
+
+
+.c-modal{
+	
+	position: fixed;
+	z-index: 99999;
+	top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	display: none;
+
+	&__background{
+
+		position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-color: rgba(0, 0, 0, 0.8);
+	}
+
+	&__content{
+		
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		max-width: 700px;
+		max-height: calc(100vh - 100px);
+		background-color: $white;
+		padding: 1rem;
+		border-radius: .5rem;
+		animation: fadeDown .318s ease-out;
+	}
+
+	&__head{
+
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		height: 4rem;
+	}
+
+	&__title{
+
+		flex: 1;
+		margin: 0;
+		align-self: flex-end;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	&__close{
+
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+		font-size: 1rem;
+	}
+
+	&__body{
+		
+		overflow: auto;
+
+	}
+
+	&__foot{
+		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 4rem;
+		padding-top: 1rem;
+	}
+
+	&__submit{
+
+		padding: 0.5rem 1rem;
+		background-color: $border;
+		border: 1px solid $border;
+		border-radius: 5px;
+		cursor: pointer;
+		@include noselect;
+		color: $black;
+		text-transform: uppercase;
+	}
+
+	&--active{
+		
+		display: flex;
+	}
+}

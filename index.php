@@ -6,15 +6,13 @@ use Classes\Models as Model;
 
 $action = @$_GET['action'] ? $_GET['action'] : 'home';
 
-$view = containerGet('view');
-
 // Action home
 // Show home content
 if ($action === 'home') {
 
     $userX = Model\User::find(1);
 
-    echo $view->make(getTheme().'.controllers.index.home', [
+    echo view(getTheme().'.controllers.index.home', [
         'pageTitle' => 'This is index controller - action home'
     ]);
 
@@ -25,7 +23,7 @@ if ($action === 'home') {
 
 elseif ($action === 'action-test') {
 
-    echo $view->make(getTheme().'.controllers.index.action-test', [
+    echo view(getTheme().'.controllers.index.action-test', [
         'pageTitle' => 'This is action test'
     ]);
 

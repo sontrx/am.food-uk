@@ -1,0 +1,31 @@
+
+
+.topbar{
+
+	height: 27px;
+	background-color: $white;
+	font-size: 13px; 
+
+	&__content{
+
+		text-align: right;
+		line-height: 1;
+		padding: 7px 0;
+	}
+
+	&__text{
+
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+
+	&__phone{
+
+		text-transform: uppercase;
+		display: inline-block;
+		margin-left: 10px;
+		padding-left: 10px;
+		border-left: 1px solid $black;
+
+	}
+}

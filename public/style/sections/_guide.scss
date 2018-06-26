@@ -1,0 +1,19 @@
+
+
+.guide{
+
+	padding: 100px 0;
+	background-color: #F7FBFA;
+
+	&__title{
+
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	&__movie{
+
+		@include midlein();
+	}
+
+}

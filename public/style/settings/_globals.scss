@@ -1,0 +1,50 @@
+
+*:focus, *:active {
+    outline: none;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+// font setting
+// @font-face {
+// 	font-family: 'AvenyT';
+// 	src: url(../font/AvenyTLight.ttf);
+// }
+
+body{
+
+	margin: 0;
+	font-family: AvenirHeavy,Helvetica,sans-serif;
+}
+
+// settings
+:root{
+	
+	--container-max-size: #{$container-desktop};
+	font-size: 20px;
+}
+
+@include screen-until($desktop){
+	// on tablet
+	:root{
+
+		--container-max-size: #{$container-tablet};
+		font-size: 18px;
+	}
+
+}
+
+@include screen-until($tablet){
+	// on mobile
+
+	:root{
+
+		--container-max-size: #{$container-mobile};
+		font-size: 14px;
+	}
+
+}
+
+

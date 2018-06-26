@@ -1,7 +1,11 @@
 @extends('default.layouts.default')
 
 @section('content')
-        
-    <h2>This is content of index controller - action home</h2>
+    
+    @include('default.partials.banner')
+    @include('default.partials.products')
+    @include('default.partials.slider')
+    @include('default.partials.guide')
+    @include('default.partials.cart')
 
 @stop

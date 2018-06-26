@@ -1,0 +1,69 @@
+
+@mixin container($height:100%){
+
+	margin: auto;
+	max-width: $container--width;
+	height: $height;
+}
+
+@mixin midlein($align-items:center){
+
+	display: flex;
+	justify-content: center;
+	align-items: $align-items;
+}
+
+@mixin lineclamp($lines){
+  
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical; 
+
+}
+
+@mixin frame($ratio:5/8, $width:100%){
+
+	width: $width;
+	padding-top: $ratio*$width;
+	background-color: $background;
+	position: relative;
+	overflow: hidden;
+}
+
+@mixin img($object-fit:cover){
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: $object-fit;
+}
+
+@mixin lineclamp($line){
+  
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical; 
+
+}
+
+@mixin noselect {
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin clearfix {
+
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}

@@ -1,0 +1,21 @@
+
+
+
+.c-navbar{
+
+	display: flex;
+	padding: 0px;
+
+	&__item{
+
+		list-style-type: none;
+		padding: 0 5px;
+	}
+
+	&__link{
+
+		text-decoration: none;
+		cursor: pointer;
+
+	}
+}

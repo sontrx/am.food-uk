@@ -1,0 +1,61 @@
+
+
+.slider{
+
+	padding: 130px 0;
+
+	&__title{
+
+		text-align: center;
+		line-height: 1;
+		font-size: 28;
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+
+	&__card{
+
+
+	}
+
+	&__image{
+
+		@include frame(1);
+	}
+
+	&__photo{
+
+		@include img();
+	}
+
+	&__text{
+
+		@include lineclamp(3);
+	}
+
+
+}
+
+
+.slick-center {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+
+/* the slides */
+.slick-slide {
+    margin: 0 15px;
+}
+/* the parent */
+.slick-list {
+    margin: 0 0;
+}
+
+.slick-track{
+
+	padding: 60px 0;
+}
+
+

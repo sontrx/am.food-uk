@@ -1,0 +1,31 @@
+
+// Break-point
+$mobile-s: 320px !default;
+$mobile: 375px !default;
+$mobile-l: 425px !default;
+$tablet: 768px !default;
+$desktop: 1024px !default;
+$desktop-l: 1440px !default;
+$gap: 32px;
+
+// Container max-width
+$container-widescreen: $desktop-l - (2*$gap);
+$container-desktop: $desktop - (2*$gap);
+$container-tablet: $tablet - (2*$gap);
+$container-mobile: $mobile - (2*$gap);
+
+// Color
+$black: #000;
+$white: #fff;
+$cyan: #4ec5c1;
+$pink: #cc3366;
+$red: #F6323E;
+
+$background: #eee;
+$border: #ccc;
+
+$text-black: #3c3c3c;
+$text-light: #7d7d7d;
+
+
+
