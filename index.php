@@ -10,10 +10,9 @@ $action = @$_GET['action'] ? $_GET['action'] : 'home';
 // Show home content
 if ($action === 'home') {
 
-    $userX = Model\User::find(1);
-
+    $products = Model\product::findAll();
     echo view(getTheme().'.controllers.index.home', [
-        'pageTitle' => 'This is index controller - action home'
+        'products' => $products,
     ]);
 
 } 
@@ -23,8 +22,11 @@ if ($action === 'home') {
 
 elseif ($action === 'action-test') {
 
+	$products = Model\product::findAll();
+	// var_dump($products[1]);
     echo view(getTheme().'.controllers.index.action-test', [
-        'pageTitle' => 'This is action test'
+        'pageTitle' => 'This is action test',
+        'products' => $products,
     ]);
 
 }

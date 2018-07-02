@@ -38,6 +38,8 @@ function activeModal () {
 // cart function
 function cartManager(){
 
+
+
     
 
     class productObj{
@@ -46,7 +48,7 @@ function cartManager(){
 
             this.productId = productId;
             this.image = image;
-            this.total = total;
+            this.total = parseInt(total);
             this.price = price;
         }
 
@@ -80,15 +82,15 @@ function cartManager(){
 
         }
 
-        productUpdateTotal ( increase ) {
+        productUpdateTotal ( increase, numb) {
 
             if( increase ) {
 
-                this.total++;
+                this.total = this.total + parseInt(numb);
                 
             }else{
 
-                this.total--;
+                this.total = this.total - parseInt(numb);
 
             }
 
@@ -133,12 +135,72 @@ function cartManager(){
             let price = 0;
 
             this.products.forEach( function ( product ) {
-                console.log(product.price, product.total);
                 price = price + product.price*product.total;
             })
                         
 
             return price;
+        }
+
+        push () {
+
+            let cartjson = JSON.stringify( cart );
+            $.ajax({
+                url: 'cart.php',
+                type: 'POST',
+                data: {
+                    action: "push",
+                    cart: cartjson,
+                },
+                success: function (data ) {
+                    
+                }
+            }).done(function(cart) {
+
+                console.log(JSON.parse(cart));
+            });
+        }
+
+        pull () {
+
+            $.ajax({
+                url: 'cart.php',
+                type: 'POST',
+                data: {
+
+                    action: "pull",
+                },
+            }).done(function(data) {
+
+
+                if ( data) {
+
+                    let pulledCart = JSON.parse(data);
+                    console.log(pulledCart);
+                    let length = pulledCart.products.length;
+                    console.log(cart);
+                    for (let i = 0; i< length; i++) {
+                        let product = pulledCart.products[i];
+                        let productId = product.productId;
+                        let image = product.image;
+                        let total = product.total;
+                        let price = product.price;
+                        let newProduct = new productObj(productId, image, total, price);
+                        cart.products.push(newProduct);
+                        // console.log(newProduct);
+
+
+                    }
+                        // console.log(cart);
+
+                    cart.initProduct();
+
+                } else {
+
+                    console.log('nodata');
+                }
+            });
+
         }
 
 
@@ -166,6 +228,7 @@ function cartManager(){
         show () {
 
             this.emptyCheck();
+            this.updatePrice();
             this.element.slideDown();
 
         }
@@ -185,7 +248,7 @@ function cartManager(){
                 if ( this.products[i].productId == productId) {
 
                     // if the item is exited in the cart, simply increase it total
-                    this.products[i].productUpdateTotal(true);
+                    this.products[i].productUpdateTotal(true , 1);
                     exited = true;
                     break;
 
@@ -208,8 +271,8 @@ function cartManager(){
 
             }
 
-            this.updatePrice();
-
+            this.push();
+            this.show();
 
         }
 
@@ -227,7 +290,7 @@ function cartManager(){
                     // if the item number more than 1, decrease it
                     if ( currentProduct.total > 1 ) {
 
-                        currentProduct.productUpdateTotal(false);
+                        currentProduct.productUpdateTotal(false, 1);
 
                     }else{
 
@@ -242,9 +305,23 @@ function cartManager(){
 
             }
 
-            this.updatePrice();
-            this.emptyCheck();
+            this.push();
+            this.show();
+        }
 
+        initProduct () {
+
+            let length = this.total;
+
+            for ( let i = 0; i < length; i++) {
+
+                let currentProduct = this.products[i];
+                currentProduct.productAppendTo(cart__leftElement);
+                currentProduct.productTotalElement.html(currentProduct.total);
+
+            }
+
+            this.show();
         }
 
 
@@ -252,22 +329,27 @@ function cartManager(){
     }
     // end cart obj
 
+    
     let cartElement = $('.js-cart');
     let cart__leftElement = $('.js-cart .cart__left');
     let cart__demoElement = cartElement.find('.cart__demo');
 
-
     let cart = new cartObj(cartElement);
+    console.log(cart);
+    cart.pull();
+
+    
+
+
 
     $('.js-productAdd').on('click', function(){
 
         // let product = {};
               
-        let image = $(this).parent().closest('.products__card').find("img").attr('src');
-        let productId = $(this).parent().closest('.products__card').attr("js-productId");
-        let total = 1;
-        let price = parseInt($(this).parent().closest('.products__card').find("[js-product-price]").attr('js-product-price'));
-
+        let image = $(this).attr('js-image');
+        let productId = $(this).attr('js-productId');
+        let total = $(this).attr('js-total');
+        let price = $(this).attr('js-price');
 
         // create a new product and add it to cart
         cart.addProduct( productId, image, total, price);

@@ -24,6 +24,16 @@
 		margin: auto;
 	}
 
+	&__link{
+
+		color: inherit;
+
+		&:hover{
+
+			color: inherit;
+		}
+	}
+
 	&__name{
 
 		margin: 20px 0 10 0;
@@ -48,6 +58,6 @@
 
 	&__button{
 
-		display: inline-block;
+		display: inline-block;	
 	}
 }

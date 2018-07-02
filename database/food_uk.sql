@@ -41,7 +41,8 @@ CREATE TABLE products (
     id int(11) NOT NULL AUTO_INCREMENT,
     name varchar(255) NOT NULL,
     image varchar(255) NOT NULL,
-    content text NOT NULL,
+    description text NOT NULL,
+    price int(11) NOT NULL,
     created_at datetime DEFAULT NULL,
     updated_at datetime DEFAULT NULL,
     PRIMARY KEY (id)
@@ -83,15 +84,9 @@ INSERT INTO categories (name, created_at, updated_at) VALUES
 #----------
 #insert products
 #----------
-INSERT INTO products (name, image, content, created_at, updated_at) VALUES
-('4 Curry Recipe Kits Subscription (free delivery)', 'default.jpg', 'You can cancel or amend your subscription at any time. Choose from our range of 6 award winning curry kits. Each curry recipe kit serves 2-3 people and contains all the building blocks you need to create a restaurant beating curry. All our recipes contain only natural ingredients, are gluten free and vegan friendly. Simply combine at home with your own fresh ingredients.', NOW(), NOW()),
-('10 Curry Recipe Kits Subscription (free delivery)', 'default.jpg', 'You can cancel or amend your subscription at any time. Choose from our range of 6 award winning curry kits. Each curry recipe kit serves 2-3 people and contains all the building blocks you need to create a restaurant beating curry. All our recipes contain only natural ingredients, are gluten free and vegan friendly. Simply combine at home with your own fresh ingredients.', NOW(), NOW()),
-('How to cook a Prawn Korma', 'default.jpg', 'You can cancel or amend your subscription at any time. Choose from our range of 6 award winning curry kits. Each curry recipe kit serves 2-3 people and contains all the building blocks you need to create a restaurant beating curry. All our recipes contain only natural ingredients, are gluten free and vegan friendly. Simply combine at home with your own fresh ingredients.', NOW(), NOW()),
-('Don\'t just cook a prawn curry, nail it with these tips', 'default.jpg', 'You can cancel or amend your subscription at any time. Choose from our range of 6 award winning curry kits. Each curry recipe kit serves 2-3 people and contains all the building blocks you need to create a restaurant beating curry. All our recipes contain only natural ingredients, are gluten free and vegan friendly. Simply combine at home with your own fresh ingredients.', NOW(), NOW()),
-('How to cook a Chicken Jalfrezi', 'default.jpg', 'You can cancel or amend your subscription at any time. Choose from our range of 6 award winning curry kits. Each curry recipe kit serves 2-3 people and contains all the building blocks you need to create a restaurant beating curry. All our recipes contain only natural ingredients, are gluten free and vegan friendly. Simply combine at home with your own fresh ingredients.', NOW(), NOW()),
-('Here\'s to the first 8 THOUSAND', 'default.jpg', 'You can cancel or amend your subscription at any time. Choose from our range of 6 award winning curry kits. Each curry recipe kit serves 2-3 people and contains all the building blocks you need to create a restaurant beating curry. All our recipes contain only natural ingredients, are gluten free and vegan friendly. Simply combine at home with your own fresh ingredients.', NOW(), NOW()),
-('First orders!', 'default.jpg', 'You can cancel or amend your subscription at any time. Choose from our range of 6 award winning curry kits. Each curry recipe kit serves 2-3 people and contains all the building blocks you need to create a restaurant beating curry. All our recipes contain only natural ingredients, are gluten free and vegan friendly. Simply combine at home with your own fresh ingredients.', NOW(), NOW()),
-('Test driving the Boom Korma', 'default.jpg', 'You can cancel or amend your subscription at any time. Choose from our range of 6 award winning curry kits. Each curry recipe kit serves 2-3 people and contains all the building blocks you need to create a restaurant beating curry. All our recipes contain only natural ingredients, are gluten free and vegan friendly. Simply combine at home with your own fresh ingredients.', NOW(), NOW());
+INSERT INTO products (name, image, description, price,  created_at, updated_at) VALUES
+('4 Curry Recipe Kits Subscription (free delivery)', 'https://cdn.shopify.com/s/files/1/0194/6555/products/hi_res_Boom_Box_large.jpg?v=1529066353', 'You can cancel or amend your subscription at any time. Choose from our range of 6 award winning curry kits. Each curry recipe kit serves 2-3 people and contains all the building blocks you need to create a restaurant beating curry. All our recipes contain only natural ingredients, are gluten free and vegan friendly. Simply combine at home with your own fresh ingredients.',14, NOW(), NOW()),
+('10 Curry Recipe Kits Subscription (free delivery)', 'https://cdn.shopify.com/s/files/1/0194/6555/products/Group_product_shot_NOTS_1200_large.png?v=1529065907', 'You can cancel or amend your subscription at any time. Choose from our range of 6 award winning curry kits. Each curry recipe kit serves 2-3 people and contains all the building blocks you need to create a restaurant beating curry. All our recipes contain only natural ingredients, are gluten free and vegan friendly. Simply combine at home with your own fresh ingredients.',30, NOW(), NOW())
 
 
 #----------

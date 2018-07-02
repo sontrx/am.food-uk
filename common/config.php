@@ -7,11 +7,11 @@ return [
     'theme' => 'default',
 
     'database' => [
-        'host' => 'mysql',
+        'host' => '',
         'port' => 3306,
         'username' => 'root',
-        'password' => 'nhincailon',
-        'database' => 'food-uk'
+        'password' => '',
+        'database' => 'food_uk'
     ]
 
 ];

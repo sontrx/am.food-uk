@@ -5,6 +5,7 @@ error_reporting(E_ALL);
 require __DIR__ . '/../vendor/autoload.php';
 require __DIR__ . '/functions.php';
 
+
 // Load app config and put to container data
 containerPut('config', require __DIR__ . '/config.php');
 
