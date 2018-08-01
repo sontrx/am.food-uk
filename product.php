@@ -19,7 +19,7 @@ if ($action === 'home') {
 elseif ( $action === 'product' ) {
 
 	$product = Model\product::find($id);
-	echo view( getTheme().'.controllers.index.product', [
+	echo view( getTheme().'.controllers.product.index', [
 		'pageTitle' => 'This is index controller - action product',
 		'product' => $product,
 	]);

@@ -12,8 +12,9 @@ class User extends Model {
     */
     public static function find($id)
     {
-        // .... //
-        // return $user;
+        
+        $user = containerGet('database')->fetchAssoc('SELECT * FROM users WHERE name = ?', array($id));
+        return $user;
     }
 
 }

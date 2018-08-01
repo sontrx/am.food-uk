@@ -2,7 +2,19 @@
 .product{
 
 	position: relative;
-	padding: 10px 0;
+	padding: 32px 0;
+	border-radius: 1px;
+
+	&__rating{
+
+		padding: 0 15px;
+	}
+
+	&__star{
+
+		color: #FFC587;
+		font-size: 12px;
+	}
 
 	&::after{
 
@@ -34,29 +46,34 @@
 	&__title{
 
 		font-size: 24px;
-		padding: 16px 12px;
+		padding: 16px 12px 0 12px;
+		margin-bottom: 0;
 		line-height: 1.4;
+		font-weight: bold;
 	}
 
 	&__main{
 
-		display: flex;
+		@include frame(2/3);
+
 
 	}
 
-	&__gallery{
-
-
-		@include frame(1, 50%);
-	}
+	
 
 	&__cart{
 
-		flex:1;
-		padding: 0 40px;
+		position: absolute;
+		padding: 40px 30px;
 		font-size: .7rem;
 		font-weight: lighter;
 		color: #333D47;
+		z-index: 1;
+		width: 350px;
+		top: 40px;
+		right: 40px;
+		background-color: white;
+		border-radius: 1px;
 	}
 
 	&__info{

@@ -2,7 +2,7 @@
 
 @section('content')
         
-    <h2>This is content of action-test</h2>
+    <h2>this test blade </h2>
     @foreach ($products as $product)
     {{$product['name']}}
     @endforeach

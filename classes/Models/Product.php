@@ -31,4 +31,37 @@ class Product extends Model {
     	$product = containerGet('database')->fetchAssoc('SELECT * FROM products WHERE id = ?', array($id));
     	return $product;
     }
+
+    /**
+    * Add a product to database
+    *
+    * @param $name , $image, $desciption, $price
+    */
+    public static function Add($name, $image, $description, $price)
+    {
+        containerGet('database')->insert('products', array('name'=>$name, 'image'=>$image, 'description' => $description, 'price'=>$price));
+        
+    }
+
+    /**
+    * Update a product on database
+    *
+    * @param $name , $image, $desciption, $price, $id
+    */
+    public static function Update($name, $image, $description, $price, $id)
+    {
+        
+        containerGet('database')->update('products', array('name'=>$name, 'image'=>$image, 'description' => $description, 'price'=>$price), array('id'=> $id));
+    }
+
+    /**
+    * Remove a product from database
+    *
+    * @param $productId
+    */
+    public static function Delete($productId)
+    {
+        containerGet('database')->delete('products', array('id' => $productId));
+    }
 }	
+

@@ -4,6 +4,13 @@
 
 	padding: 130px 0;
 	background-color: #F7FBFA;
+
+	&__box{
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 100px 20px;
+	}
 	
 	&__title{
 
@@ -19,7 +26,7 @@
 
 	&__image{
 
-		max-width: 250px;
+		max-width: 350px;
 		border-radius: 50px;
 		margin: auto;
 	}
@@ -27,6 +34,7 @@
 	&__link{
 
 		color: inherit;
+		text-align: center;
 
 		&:hover{
 
@@ -58,6 +66,17 @@
 
 	&__button{
 
-		display: inline-block;	
+		display: inline-block;
+		padding: 6px 24px;	
+		background-color: $blue;
+		border-color: $blue;
+
+		&:hover{
+
+			i{
+
+				animation: upDown .2s ease;
+			}
+		}
 	}
 }

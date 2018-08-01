@@ -1,0 +1,98 @@
+@import "tools/_all.scss";
+@import "settings/_all.scss";
+@import "components/_all.scss";
+
+
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+
+.admin{
+
+	padding: 1em;
+	border-radius: 6px;
+	border: 1px solid #f8f9fa;
+
+	&__title{
+
+		font-size: 22px;
+		font-weight: 400;
+	}
+}
+
+.form-add-product{
+
+	background-color: #212529;
+	padding: 20px;
+	color: #fff;
+	margin-bottom: 50px;
+}
+
+
+.table--product{
+
+	.frame{
+
+		@include frame(1, 40px);
+	}
+
+	.image{
+
+		@include img();
+	}
+
+	.delete{
+
+		cursor: pointer;
+	}
+
+	.product-link{
+		color: inherit;
+	}
+}
+
+.sidebar{
+
+	background-color: #f8f9fa;
+	border-radius: 6px;
+	padding-bottom: 20px;
+	border: 2px solid #f8f9fa;
+	.nav-link{
+
+		color: #212529;
+	}
+
+	.active{
+
+		background-color: white;
+	}
+}
+
+.image-frame{
+
+	@include frame(1, 200px);
+}
+
+.product-image{
+
+	@include img();
+}
+
+.product-name{
+
+	@include lineclamp(1);
+}
+
+
+
+
+
+
+
+
+

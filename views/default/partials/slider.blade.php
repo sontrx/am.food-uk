@@ -9,11 +9,8 @@
 			<div class="slider__image"><img class="slider__photo" src="public/images/slide1.jpg" alt="Card image cap"></div>
 			<div class="card-body">
 			<p class="card-text slider__text">#Repost @julietsjourney76 with @get_repost
-				・・・
 				Have you tried @boomkitchen curries yet? Korma is one of my favs... if you fancy a tasty authentic curry then these are for you... best curry kits I have tried x .
-				.
-				You can get 15% off if you use my code Julietslimmingjourney at www.boomkitchen.co.uk link in bio
-				.
+
 				#boomkitchen #currykits #curry #korma.#authenticcurry</p>
 			<p class="card-text slider__text"><small class="text-muted">Jun 17, 2018</small></p>
 			</div>
@@ -24,9 +21,7 @@
 			<p class="card-text slider__text">#Repost @julietsjourney76 with @get_repost
 				・・・
 				Have you tried @boomkitchen curries yet? Korma is one of my favs... if you fancy a tasty authentic curry then these are for you... best curry kits I have tried x .
-				.
-				You can get 15% off if you use my code Julietslimmingjourney at www.boomkitchen.co.uk link in bio
-				.
+
 				#boomkitchen #currykits #curry #korma.#authenticcurry</p>
 			<p class="card-text slider__text"><small class="text-muted">Jun 17, 2018</small></p>
 			</div>
@@ -37,9 +32,7 @@
 			<p class="card-text slider__text">#Repost @julietsjourney76 with @get_repost
 				・・・
 				Have you tried @boomkitchen curries yet? Korma is one of my favs... if you fancy a tasty authentic curry then these are for you... best curry kits I have tried x .
-				.
-				You can get 15% off if you use my code Julietslimmingjourney at www.boomkitchen.co.uk link in bio
-				.
+
 				#boomkitchen #currykits #curry #korma.#authenticcurry</p>
 			<p class="card-text slider__text"><small class="text-muted">Jun 17, 2018</small></p>
 			</div>
@@ -50,9 +43,7 @@
 			<p class="card-text slider__text">#Repost @julietsjourney76 with @get_repost
 				・・・
 				Have you tried @boomkitchen curries yet? Korma is one of my favs... if you fancy a tasty authentic curry then these are for you... best curry kits I have tried x .
-				.
-				You can get 15% off if you use my code Julietslimmingjourney at www.boomkitchen.co.uk link in bio
-				.
+
 				#boomkitchen #currykits #curry #korma.#authenticcurry</p>
 			<p class="card-text slider__text"><small class="text-muted">Jun 17, 2018</small></p>
 			</div>
@@ -63,9 +54,7 @@
 			<p class="card-text slider__text">#Repost @julietsjourney76 with @get_repost
 				・・・
 				Have you tried @boomkitchen curries yet? Korma is one of my favs... if you fancy a tasty authentic curry then these are for you... best curry kits I have tried x .
-				.
-				You can get 15% off if you use my code Julietslimmingjourney at www.boomkitchen.co.uk link in bio
-				.
+
 				#boomkitchen #currykits #curry #korma.#authenticcurry</p>
 			<p class="card-text slider__text"><small class="text-muted">Jun 17, 2018</small></p>
 			</div>
@@ -76,9 +65,7 @@
 			<p class="card-text slider__text">#Repost @julietsjourney76 with @get_repost
 				・・・
 				Have you tried @boomkitchen curries yet? Korma is one of my favs... if you fancy a tasty authentic curry then these are for you... best curry kits I have tried x .
-				.
-				You can get 15% off if you use my code Julietslimmingjourney at www.boomkitchen.co.uk link in bio
-				.
+
 				#boomkitchen #currykits #curry #korma.#authenticcurry</p>
 			<p class="card-text slider__text"><small class="text-muted">Jun 17, 2018</small></p>
 			</div>

@@ -28,7 +28,7 @@
 	padding-top: $ratio*$width;
 	background-color: $background;
 	position: relative;
-	overflow: hidden;
+	// overflow: hidden;
 }
 
 @mixin img($object-fit:cover){
