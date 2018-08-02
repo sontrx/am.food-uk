@@ -36,3 +36,6 @@ $appConfig = containerGet('config');
 
     // Put view manager to container
     containerPut('view', $blade);
+
+// ------------------------------ //
+

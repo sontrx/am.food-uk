@@ -14,11 +14,11 @@
 						<small>all field are required</small>
 					</div>
 
-					<form class="checkout__form">
+					<form class="checkout__form" action="checkout.php" method="POST">
 
 						<div class="form-group">
 							<label for="genderSelect">Title:</label>
-							<select id="genderSelect" class="form-control">
+							<select id="genderSelect" class="form-control" name="genderSelect">
 								<option>Mr</option>
 								<option>Mrs</option>
 							</select>
@@ -42,12 +42,12 @@
 
 							<div class="col-sm-6">
 								<label>Email</label>
-								<input type="email" name="firstName" class="form-control" placeholder="name@example.com">
+								<input type="email" name="email" class="form-control" placeholder="name@example.com">
 							</div>
 
 							<div class="col-sm-6">
 								<label>Phone number</label>
-								<input type="phone" name="lastName" class="form-control">
+								<input type="phone" name="phone" class="form-control">
 							</div>
 							
 						</div>
@@ -65,11 +65,28 @@
 							<input type="text" name="postCode" class="form-control" placeholder="..."></input>
 						</div>
 
+						<label>Payment *</label>
+						<div class="form-group">
+
+							<script
+							src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+							data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
+							data-amount="<?php echo e($total); ?>"
+							data-name="Boomkitchen"
+							data-description="Pay your order"
+							data-image="public/images/logo.png"
+							data-locale="auto"
+							data-zip-code="true"
+							data-currency="gbp">
+							</script>
+						</div>
+
 
 					</form>
 
+
  				</div>
- 				<button type="submit" class="btn btn-primary btn-block">Next: Delivery</button>
+ 				<button type="submit" class="btn btn-primary btn-block" disabled>Next: Delivery</button>
 
 			</div>
 
@@ -129,8 +146,8 @@
 						</div>
 
 						<div class="product__bonus">
-							<span class="product__control js-productAdd" js-productAdd" js-image="<?php echo e($product['image']); ?>" js-productId="<?php echo e($product['id']); ?>" js-total="<?php echo e($product['total']); ?>" js-price="<?php echo e($product['price']); ?>"><i class="fas fa-plus"></i></span>
-							<span class="product__control js-checkoutProductRemove" js-productAdd" js-productId="<?php echo e($product['id']); ?>" ><i class="fas fa-minus"></i></span>
+							<span class="product__control js-productAdd" js-image="<?php echo e($product['image']); ?>" js-productId="<?php echo e($product['id']); ?>" js-total="<?php echo e($product['total']); ?>" js-price="<?php echo e($product['price']); ?>"><i class="fas fa-plus"></i></span>
+							<span class="product__control js-checkoutProductRemove" js-productId="<?php echo e($product['id']); ?>" ><i class="fas fa-minus"></i></span>
 						</div>
 
 					</div>

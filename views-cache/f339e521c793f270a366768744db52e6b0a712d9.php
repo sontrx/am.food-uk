@@ -7,7 +7,7 @@
 
 <!-- Title -->
 <title>foodUK</title>
-<link rel="icon" type="images/" href="images/logo2.png">
+<link rel="icon" type="images/" href="public/images/logo.png">
 
 <!-- bootstrap -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">

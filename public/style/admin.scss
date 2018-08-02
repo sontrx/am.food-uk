@@ -36,6 +36,8 @@
 
 .table--product{
 
+	font-size: 14px;
+
 	.frame{
 
 		@include frame(1, 40px);
@@ -88,6 +90,10 @@
 	@include lineclamp(1);
 }
 
+.orders-table{
+
+	font-size: 14px;
+}
 
 
 

@@ -152,6 +152,16 @@ switch ($tab) {
 			'user' => $_SESSION['admin']['name'],
 		]);
  		break;
+
+	case 'orders':
+		
+		$orders = Model\Order::findAll();
+		echo view( getTheme(). "/controllers/admin/orders", [
+			'orders' => $orders,
+			'user' => $_SESSION['admin']['name'],
+		]);
+		break;
+
  	
  	default:
  		// return the index page

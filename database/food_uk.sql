@@ -38,11 +38,29 @@ CREATE TABLE categories (
 #Table structure for table products
 # ----------
 CREATE TABLE products (
+
     id int(11) NOT NULL AUTO_INCREMENT,
     name varchar(255) NOT NULL,
     image varchar(255) NOT NULL,
     description text NOT NULL,
     price int(11) NOT NULL,
+    created_at datetime DEFAULT NULL,
+    updated_at datetime DEFAULT NULL,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+# ----------
+#Table structure for table orders
+# ----------
+CREATE TABLE orders (
+
+    id int(11) NOT NULL AUTO_INCREMENT,
+    content text NOT NULL,
+    buyer varchar(255) NOT NULL,
+    email varchar(255) NOT NULL,
+    address text NOT NULL,
+    zipcode int(11) NOT NULL,
+    phone int(11) NOT NULL,
     created_at datetime DEFAULT NULL,
     updated_at datetime DEFAULT NULL,
     PRIMARY KEY (id)

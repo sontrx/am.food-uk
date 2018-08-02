@@ -13,6 +13,7 @@
     },
     "require": {
         "doctrine/dbal": "^2.7",
-        "jenssegers/blade": "^1.1"
+        "jenssegers/blade": "^1.1",
+        "stripe/stripe-php": "^6.13"
     }
 }

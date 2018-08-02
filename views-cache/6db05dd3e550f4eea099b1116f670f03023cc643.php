@@ -10,7 +10,7 @@
 
 	<div class="wrapper">
 
-		<div class="container">
+		<div class="container-fluid">
 			<nav class="navbar navbar-light " style="padding-right: 0">
 			  <a class="navbar-brand" href="admin">
 			    <img src="public/images/logo.png" width="50" height="50" alt="">
@@ -28,7 +28,7 @@
 		</div>
 		
 
-		<div class="container">
+		<div class="container-fluid">
 
 			
 
