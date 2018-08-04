@@ -28,13 +28,13 @@
 			    @endforeach
 
 			    <tr>
-			    	<th>Shipping cost:</th>
-			    	<td colspan="3">£{{$shippingCost}}</td>
+			    	<th colspan='2'>Shipping cost:</th>
+			    	<td colspan="2">£{{$shippingCost}}</td>
 			    	
 			    </tr>
 			    <tr>
-			    	<th>Total cost:</th>
-			    	<td colspan="3">£{{$total}}</td>
+			    	<th colspan='2'>Total cost:</th>
+			    	<td colspan="2">£{{$total}}</td>
 			    	
 			    </tr>
 			  </tbody>

@@ -28,13 +28,13 @@
 			    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
 			    <tr>
-			    	<th>Shipping cost:</th>
-			    	<td colspan="3">£<?php echo e($shippingCost); ?></td>
+			    	<th colspan='2'>Shipping cost:</th>
+			    	<td colspan="2">£<?php echo e($shippingCost); ?></td>
 			    	
 			    </tr>
 			    <tr>
-			    	<th>Total cost:</th>
-			    	<td colspan="3">£<?php echo e($total); ?></td>
+			    	<th colspan='2'>Total cost:</th>
+			    	<td colspan="2">£<?php echo e($total); ?></td>
 			    	
 			    </tr>
 			  </tbody>

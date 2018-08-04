@@ -42,7 +42,7 @@
 
 							<div class="col-sm-6">
 								<label>Email</label>
-								<input type="email" name="email" class="form-control" placeholder="name@example.com">
+								<input type="email" name="email" class="form-control" placeholder="">
 							</div>
 
 							<div class="col-sm-6">
@@ -55,14 +55,14 @@
 						<div class="form-group">
 							
 							<label>Address:</label>
-							<input type="text" name="address" class="form-control" placeholder="your address">
+							<input type="text" name="address" class="form-control" placeholder="">
 
 						</div>
 
 						<div class="form-group">
 							
 							<label>Post Code</label>
-							<input type="text" name="postCode" class="form-control" placeholder="..."></input>
+							<input type="text" name="postCode" class="form-control" placeholder=""></input>
 						</div>
 
 						<label>Payment *</label>
@@ -71,10 +71,10 @@
 							<script
 							src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 							data-key="pk_test_TYooMQauvdEDq54NiTphI7jx"
-							data-amount="<?php echo e($total); ?>"
+							data-amount="<?php echo e($total*100); ?>"
 							data-name="Boomkitchen"
 							data-description="Pay your order"
-							data-image="public/images/logo.png"
+							data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
 							data-locale="auto"
 							data-zip-code="true"
 							data-currency="gbp">

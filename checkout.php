@@ -46,7 +46,7 @@ if($_POST){
 
 	$charge = \Stripe\Charge::create([
 
-	    'amount' => $total,
+	    'amount' => $total*100,
 	    'currency' => 'gbp', 
 	    'description' => 'Example charge',
 	    'source' => $token,
@@ -64,7 +64,7 @@ if($_POST){
 	$content= '';
 	foreach ($products as $product) {
     	$content_product = $product['id']."-".$product['name']."x".$product['total'];
-    	$content = $content."<br>".$content_product;
+    	$content = $content."|".$content_product;
     }
 	$buyer= $genderSelect.' '.$firstName.' '.$lastName;
 
