@@ -166,9 +166,15 @@ function cartManager(){
             return endPrice;
         }
 
-        push () {
+        push () { 
 
-            let cartjson = JSON.stringify( cart );
+            let cartjson = {
+                products: cart.products,
+
+            };
+
+            cartjson = JSON.stringify(cartjson);
+
             $.ajax({
                 url: 'cart.php',
                 type: 'POST',

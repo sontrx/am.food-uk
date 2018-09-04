@@ -10,6 +10,11 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 100px 20px;
+
+		@include screen-until($tablet){
+
+			grid-template-columns: 1fr;
+		}
 	}
 	
 	&__title{
@@ -65,7 +70,8 @@
 	}
 
 	&__button{
-
+		
+		font-size: 1em;
 		display: inline-block;
 		padding: 6px 24px;	
 		background-color: $blue;
