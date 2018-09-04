@@ -65,7 +65,14 @@
 							<input type="text" name="postCode" class="form-control" placeholder=""></input>
 						</div>
 
-						<label>Payment *</label>
+						<div class="form-check">
+					      <input class="form-check-input" type="checkbox" value="subscribed" name="subscribe" id="subscribe">
+					      <label class="form-check-label" for="subscribe">
+					        Subscrible for next months!
+
+					      </label>
+					    </div>
+						<br>
 						<div class="form-group">
 
 							<script
@@ -86,7 +93,7 @@
 
 
  				</div>
- 				<button type="submit" class="btn btn-primary btn-block" disabled>Next: Delivery</button>
+ 				<button type="submit" class="btn btn-dark btn-block" disabled>Next: Delivery >></button>
 
 			</div>
 

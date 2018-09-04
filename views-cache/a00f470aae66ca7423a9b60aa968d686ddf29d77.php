@@ -43,7 +43,7 @@
 			</table>
 			<!-- end table -->
 			
-
+			
 		</div>
 		<!-- end invoice__table -->
 	</div>

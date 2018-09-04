@@ -37,10 +37,10 @@ class Order extends Model {
     *
     * @param $name , $image, $desciption, $price
     */
-    public static function Add($content, $buyer, $email, $address, $zipcode, $phone)
+    public static function Add($content, $total, $buyer, $email, $address, $zipcode, $phone)
     {
         $created_at = date('Y-m-d H:i:s');
-        containerGet('database')->insert('orders', array('content'=>$content, 'buyer'=>$buyer, 'email' => $email, 'address'=>$address, 'zipcode'=>$zipcode, 'phone'=>$phone, 'created_at'=>$created_at));
+        containerGet('database')->insert('orders', array('content'=>$content, 'total'=>$total, 'buyer'=>$buyer, 'email' => $email, 'address'=>$address, 'zipcode'=>$zipcode, 'phone'=>$phone, 'created_at'=>$created_at));
         
     }
 

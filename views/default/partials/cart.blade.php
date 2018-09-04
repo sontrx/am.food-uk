@@ -11,7 +11,7 @@
 	</div>
 	<div class="cart__right">
 		<span class="cart__price">£0</span>
-		<a href="checkout" class="btn btn-primary cart__button">set delivery date</a>
+		<a href="checkout" class="btn btn-primary cart__button"><i class="fas fa-angle-double-right"></i> delivery</a>
 		<button class="cart__close js-cart-close"><i class="fas fa-times"></i></button>
 
 	</div>

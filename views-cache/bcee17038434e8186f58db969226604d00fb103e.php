@@ -7,6 +7,7 @@
     <tr>
       <th scope="col">id</th>
       <th scope="col">content</th>
+      <th scope="col">total</th>
       <th scope="col">buyer</th>
       <th scope="col">email</th>
       <th scope="col">address</th>
@@ -25,6 +26,7 @@
 
         
       </td>
+      <td><?php echo e($order['total']); ?> £</td>
       <td><?php echo e($order['buyer']); ?></td>
       <td><?php echo e($order['email']); ?></td>
       <td><?php echo e($order['address']); ?></td>

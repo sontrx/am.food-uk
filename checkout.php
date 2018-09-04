@@ -12,25 +12,29 @@ $cartTotalPrice= 0;
 $cartTotal= 0;
 $shippingCost = 0;
 
+if (isset($_SESSION['cart'])){
 
-foreach ($_SESSION['cart']->products as $productOnCart) {
-	# code...
-	$productArray = [];
-	$product = Model\product::find($productOnCart->productId);
+	foreach ($_SESSION['cart']->products as $productOnCart) {
+		# code...
+		$productArray = [];
+		$product = Model\product::find($productOnCart->productId);
 
-	$productArray['name'] = $product['name'];
-	$productArray['id'] = $product['id'];
-	$productArray['total'] = $productOnCart->total;
-	$productArray['price'] = $product['price'];
-	$productArray['image'] = $product['image'];
-	array_push($products, $productArray);
+		$productArray['name'] = $product['name'];
+		$productArray['id'] = $product['id'];
+		$productArray['total'] = $productOnCart->total;
+		$productArray['price'] = $product['price'];
+		$productArray['image'] = $product['image'];
+		array_push($products, $productArray);
 
-	$cartTotalPrice = $cartTotalPrice + $productArray['price']*$productArray['total'];
-	$cartTotal = $cartTotal + $productArray['total'];
+		$cartTotalPrice = $cartTotalPrice + $productArray['price']*$productArray['total'];
+		$cartTotal = $cartTotal + $productArray['total'];
 
+
+	}
 
 }
 
+// the total price that we charge the buyer
 $total= $cartTotalPrice + $shippingCost;
 
 if($_POST){
@@ -42,15 +46,52 @@ if($_POST){
 
 	// Token is created using Checkout or Elements!
 	// Get the payment token ID submitted by the form:
+
 	$token = $_POST['stripeToken'];
 
+	// Create a Customer
+	$customer = \Stripe\Customer::create([
+	    'email' => $_POST['email'],
+	    'source' => $token,
+	]);
+
+	// Charge the Customer 
 	$charge = \Stripe\Charge::create([
 
 	    'amount' => $total*100,
 	    'currency' => 'gbp', 
-	    'description' => 'Example charge',
-	    'source' => $token,
+        'description' => 'order onetime charge',
+	    'customer' => $customer->id,
 	]);
+
+
+	// For subscription
+	if ( isset($_POST['subscribe']) and $_POST['subscribe'] === 'subscribed'){
+
+		// Create a product on by stripe API
+		$product = \Stripe\Product::create([
+		    'name' => 'BoomKitchen Recipe',
+		    'type' => 'service',
+		]);
+
+		$plan = \Stripe\Plan::create([
+
+		  'product' => $product->id,
+		  'nickname' => "BoomKitchen Monthy Subscribe",
+		  'interval' => 'month',
+		  'currency' => 'gbp',
+		  'amount' => $total*100,
+		]);
+
+		// Make subscription
+		$subscription = \Stripe\Subscription::create([
+		    'customer' => $customer->id,
+		    'items' => [['plan' => $plan->id]],
+		]);
+
+		
+
+	};
 
 	// Insert order to database
 	$genderSelect = $_POST['genderSelect'];
@@ -68,7 +109,7 @@ if($_POST){
     }
 	$buyer= $genderSelect.' '.$firstName.' '.$lastName;
 
-	Model\Order::Add($content, $buyer, $email, $address, $postcode, $phone);
+	Model\Order::Add($content,$total, $buyer, $email, $address, $postcode, $phone);
 
 	unset($_SESSION['cart']);
 

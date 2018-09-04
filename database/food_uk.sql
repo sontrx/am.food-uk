@@ -56,6 +56,7 @@ CREATE TABLE orders (
 
     id int(11) NOT NULL AUTO_INCREMENT,
     content text NOT NULL,
+    total int(11) NOT NULL,
     buyer varchar(255) NOT NULL,
     email varchar(255) NOT NULL,
     address text NOT NULL,

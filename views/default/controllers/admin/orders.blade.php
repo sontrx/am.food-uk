@@ -11,6 +11,7 @@
     <tr>
       <th scope="col">id</th>
       <th scope="col">content</th>
+      <th scope="col">total</th>
       <th scope="col">buyer</th>
       <th scope="col">email</th>
       <th scope="col">address</th>
@@ -28,6 +29,7 @@
       {{$order['content']}}
         
       </td>
+      <td>{{$order['total']}} £</td>
       <td>{{$order['buyer']}}</td>
       <td>{{$order['email']}}</td>
       <td>{{$order['address']}}</td>
